@@ -72,7 +72,6 @@
         .hero-text .subtitle { color: var(--accent); font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; letter-spacing: 2px; text-transform: uppercase; }
         .hero-text .intro { color: var(--text-dim); max-width: 650px; margin: 0 auto 40px; line-height: 1.6; }
 
-        /* Menu Grid */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -97,7 +96,6 @@
 
         .menu-item i { font-size: 1.8rem; color: var(--primary); margin-bottom: 12px; }
 
-        /* Content Sections */
         .content-section {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -109,13 +107,8 @@
             transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
-        .content-section.active { 
-            display: block; 
-            opacity: 1; 
-            transform: translateY(0); 
-        }
+        .content-section.active { display: block; opacity: 1; transform: translateY(0); }
 
-        /* Unified Card Style */
         .grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -133,45 +126,22 @@
             text-align: center;
         }
 
-        .pop-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.1);
-        }
-
-        .pop-card i {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 15px;
-            display: block;
-        }
-
+        .pop-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .pop-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; display: block; }
         .pop-card h3 { color: var(--primary); margin-bottom: 10px; }
         .pop-card p { color: var(--text-dim); line-height: 1.6; }
 
-        /* Project Detail Styling */
         #detail-content { text-align: left; }
         #detail-content ul { margin-top: 15px; padding-left: 20px; color: var(--text-dim); }
         #detail-content li { margin-bottom: 10px; line-height: 1.6; }
         .btn-view { margin-top: 20px; display: inline-block; cursor: pointer; color: var(--accent); border: 1px solid var(--accent); padding: 8px 15px; border-radius: 5px; text-decoration: none; transition: 0.3s; }
         .btn-view:hover { background: var(--accent); color: var(--bg); }
 
-        /* Resume Styling */
         .resume-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            align-items: center;
-            margin-top: 30px;
-            padding-bottom: 50px;
+            display: flex; flex-direction: column; gap: 30px; align-items: center; margin-top: 30px; padding-bottom: 50px;
         }
-
         .resume-page {
-            width: 100%;
-            max-width: 800px;
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            border: 1px solid rgba(255,255,255,0.1);
+            width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1);
         }
 
         h2 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary); border-bottom: 2px solid rgba(0, 210, 255, 0.1); display: inline-block; padding-bottom: 5px; }
@@ -228,9 +198,24 @@
         </div>
     </section>
 
+    <section id="edu" class="content-section">
+        <h2>Education</h2>
+        <div class="grid-layout">
+            <div class="pop-card">
+                <i class="fas fa-university"></i>
+                <h3>Graphic Era University</h3>
+                <p>Bachelor of Computer Applications (BCA)<br>2022 - 2025<br><strong>GPA: 7.7</strong></p>
+            </div>
+            <div class="pop-card">
+                <i class="fas fa-school"></i>
+                <h3>ST. Francis School</h3>
+                <p>XII (Intermediate): 76%<br>X (Matriculation): 67%</p>
+            </div>
+        </div>
+    </section>
+
     <section id="projects" class="content-section">
         <h2>Technical Projects</h2>
-        <p style="color: var(--accent); margin-bottom: 15px;">Click a project card to see full details.</p>
         <div class="grid-layout">
             <div class="pop-card" style="cursor: pointer;" onclick="openProject('sales')">
                 <h3>Sales Dashboard</h3>
@@ -251,48 +236,50 @@
     </section>
 
     <section id="project-detail" class="content-section">
-        <h2 id="detail-title">Project Name</h2>
+        <h2 id="detail-title">Project Detail</h2>
         <div class="pop-card" style="text-align: left; margin-top: 20px;">
             <div id="detail-content"></div>
             <br>
-            <a class="btn-view" onclick="showSection('projects')">
-                <i class="fas fa-arrow-left"></i> Back to Projects
-            </a>
-        </div>
-    </section>
-
-    <section id="edu" class="content-section">
-        <h2>Education</h2>
-        <div class="grid-layout">
-            <div class="pop-card"><i class="fas fa-university"></i><h3>Graphic Era University</h3><p>BCA | 2022 - 2025<br><strong>GPA: 7.7</strong></p></div>
-            <div class="pop-card"><i class="fas fa-school"></i><h3>ST. Francis School</h3><p>12th Grade: 76%<br>10th Grade: 67%</p></div>
+            <a class="btn-view" onclick="showSection('projects')"><i class="fas fa-arrow-left"></i> Back to Projects</a>
         </div>
     </section>
 
     <section id="skills" class="content-section">
         <h2>Expertise</h2>
         <div class="grid-layout">
-            <div class="pop-card"><i class="fas fa-laptop-code"></i><h3>Languages</h3><p>Java, Python, C, SQL, JavaScript</p></div>
-            <div class="pop-card"><i class="fas fa-layer-group"></i><h3>Web & AI</h3><p>React.js, Node.js, TensorFlow, Scikit-learn</p></div>
-            <div class="pop-card"><i class="fas fa-comments"></i><h3>Soft Skills</h3><p>Clarity of thinking, Communication, Interpersonal skills</p></div>
+            <div class="pop-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Languages</h3>
+                <p>Java, Python, C, SQL, JavaScript, HTML/CSS</p>
+            </div>
+            <div class="pop-card">
+                <i class="fas fa-layer-group"></i>
+                <h3>Frameworks & Tools</h3>
+                <p>React.js, Node.js, Power BI, TensorFlow, Scikit-learn, Git</p>
+            </div>
+            <div class="pop-card">
+                <i class="fas fa-comments"></i>
+                <h3>Soft Skills</h3>
+                <p>Critical Thinking, Interpersonal Skills, Adaptability, Networking</p>
+            </div>
         </div>
     </section>
 
     <section id="certs" class="content-section">
         <h2>Certifications</h2>
         <div class="grid-layout">
-            <div class="pop-card"><i class="fas fa-award"></i><h3>React Dev</h3><p>HackerRank</p></div>
-            <div class="pop-card"><i class="fab fa-microsoft"></i><h3>Azure AI</h3><p>LinkedIn Learning</p></div>
-            <div class="pop-card"><i class="fas fa-code"></i><h3>Node.js</h3><p>Simplilearn</p></div>
+            <div class="pop-card"><i class="fas fa-award"></i><h3>React (Basic)</h3><p>HackerRank Certified</p></div>
+            <div class="pop-card"><i class="fab fa-microsoft"></i><h3>Azure AI</h3><p>Microsoft/LinkedIn Learning</p></div>
+            <div class="pop-card"><i class="fas fa-code"></i><h3>Node.js</h3><p>Simplilearn Certified</p></div>
         </div>
     </section>
 
     <section id="hobbies" class="content-section">
         <h2>Hobbies</h2>
         <div class="grid-layout">
-            <div class="pop-card"><i class="fas fa-book-open"></i><h3>Reading</h3><p>Tech blogs and literature.</p></div>
-            <div class="pop-card"><i class="fas fa-camera"></i><h3>Photography</h3><p>Capturing detail and moments.</p></div>
-            <div class="pop-card"><i class="fas fa-plane"></i><h3>Traveling</h3><p>New cultures and adaptability.</p></div>
+            <div class="pop-card"><i class="fas fa-book-open"></i><h3>Reading</h3><p>Staying updated with tech literature.</p></div>
+            <div class="pop-card"><i class="fas fa-camera"></i><h3>Photography</h3><p>Focusing on visual detail.</p></div>
+            <div class="pop-card"><i class="fas fa-plane"></i><h3>Traveling</h3><p>Exploring new perspectives.</p></div>
         </div>
     </section>
 
@@ -306,40 +293,18 @@
     </section>
 
     <script>
-        // Project Data Storage
         const projectData = {
             'sales': {
                 title: "Sales Dashboard Analysis",
-                content: `
-                    <p><strong>Challenge:</strong> Managing scattered regional sales data to identify underperforming sectors.</p>
-                    <ul>
-                        <li>Developed interactive Power BI dashboards for real-time KPI tracking.</li>
-                        <li>Cleaned and modeled data using SQL to ensure 100% data integrity.</li>
-                        <li>Provided insights that highlight 15% growth potential in North-Zone regions.</li>
-                    </ul>
-                `
+                content: `<p><strong>Challenge:</strong> Managing regional sales data to identify gaps.</p><ul><li>Developed Power BI dashboards for real-time KPI tracking.</li><li>Cleaned and modeled data using SQL for 100% integrity.</li><li>Identified 15% growth potential in North-Zone regions.</li></ul>`
             },
             'face': {
                 title: "AI Face Recognition System",
-                content: `
-                    <p><strong>Technology:</strong> Python, OpenCV, CNN (Convolutional Neural Networks).</p>
-                    <ul>
-                        <li>Engineered an automated attendance system using facial landmark detection.</li>
-                        <li>Reduced manual logging time by 80% for small-scale organizations.</li>
-                        <li>Implemented a secure database to store encrypted biometric timestamps.</li>
-                    </ul>
-                `
+                content: `<p><strong>Technology:</strong> Python, OpenCV, CNN.</p><ul><li>Engineered automated attendance via facial landmark detection.</li><li>Reduced manual logging time by 80%.</li><li>Implemented secure encrypted biometric storage.</li></ul>`
             },
             'gemstone': {
                 title: "Gemstone Classification Model",
-                content: `
-                    <p><strong>Goal:</strong> Utilizing Deep Learning to identify and classify precious stones from raw images.</p>
-                    <ul>
-                        <li>Built a custom CNN architecture using TensorFlow and Keras.</li>
-                        <li>Processed a dataset of high-resolution gemstone images with augmentation techniques.</li>
-                        <li>Achieved high accuracy in distinguishing between visually similar stones like Sapphire and Iolite.</li>
-                    </ul>
-                `
+                content: `<p><strong>Goal:</strong> Deep Learning to classify stones from raw images.</p><ul><li>Built custom CNN using TensorFlow and Keras.</li><li>Achieved high accuracy distinguishing Sapphire from Iolite.</li></ul>`
             }
         };
 
@@ -349,21 +314,12 @@
             const targetSection = document.getElementById(id);
             const backBtn = document.getElementById('backBtn');
 
-            // Hide all current sections first
-            sections.forEach(s => {
-                s.classList.remove('active');
-                setTimeout(() => { if(!s.classList.contains('active')) s.style.display = 'none'; }, 500);
-            });
-
+            sections.forEach(s => { s.classList.remove('active'); setTimeout(() => { if(!s.classList.contains('active')) s.style.display = 'none'; }, 500); });
             home.classList.add('fade-out');
-            
             setTimeout(() => {
                 home.classList.add('hidden');
                 targetSection.style.display = 'block';
-                setTimeout(() => {
-                    targetSection.classList.add('active');
-                    backBtn.style.display = 'block';
-                }, 50);
+                setTimeout(() => { targetSection.classList.add('active'); backBtn.style.display = 'block'; }, 50);
             }, 500);
         }
 
@@ -378,29 +334,27 @@
             const home = document.getElementById('home-page');
             const activeSection = document.querySelector('.content-section.active');
             const backBtn = document.getElementById('backBtn');
-            
             if(activeSection) activeSection.classList.remove('active');
             backBtn.style.display = 'none';
-            
-            setTimeout(() => {
-                if(activeSection) activeSection.style.display = 'none';
-                home.classList.remove('hidden');
-                setTimeout(() => { home.classList.remove('fade-out'); }, 50);
-            }, 500);
+            setTimeout(() => { if(activeSection) activeSection.style.display = 'none'; home.classList.remove('hidden'); setTimeout(() => { home.classList.remove('fade-out'); }, 50); }, 500);
         }
 
-        // Animated Background
+        // --- BACKGROUND: 200 PARTICLES, NO LINES ---
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
+        const particleCount = 200; 
+
         function initCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+
         class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2;
-                this.speedX = Math.random() * 0.4 - 0.2;
-                this.speedY = Math.random() * 0.4 - 0.2;
+                this.size = Math.random() * 2.5 + 0.5;
+                this.speedX = Math.random() * 0.6 - 0.3;
+                this.speedY = Math.random() * 0.6 - 0.3;
+                this.opacity = Math.random();
             }
             update() {
                 this.x += this.speedX; this.y += this.speedY;
@@ -408,19 +362,24 @@
                 if (this.y > canvas.height) this.y = 0; if (this.y < 0) this.y = canvas.height;
             }
             draw() {
-                ctx.fillStyle = 'rgba(0, 210, 255, 0.3)';
+                ctx.fillStyle = `rgba(0, 210, 255, ${this.opacity})`;
+                ctx.shadowBlur = 5;
+                ctx.shadowColor = '#00d2ff';
                 ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
             }
         }
+
         function createParticles() {
             particles = [];
-            for (let i = 0; i < 80; i++) particles.push(new Particle());
+            for (let i = 0; i < particleCount; i++) particles.push(new Particle());
         }
+
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach(p => { p.update(); p.draw(); });
             requestAnimationFrame(animate);
         }
+
         initCanvas(); createParticles(); animate();
         window.addEventListener('resize', () => { initCanvas(); createParticles(); });
     </script>
