@@ -33,7 +33,6 @@
             z-index: -1;
         }
 
-        /* Essential Transition Classes */
         .fade-out { opacity: 0 !important; transform: scale(0.9); pointer-events: none; }
         .hidden { display: none !important; }
 
@@ -111,7 +110,7 @@
 
         .grid-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
@@ -126,23 +125,31 @@
             text-align: center;
         }
 
-        .pop-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .pop-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; display: block; }
-        .pop-card h3 { color: var(--primary); margin-bottom: 10px; }
-        .pop-card p { color: var(--text-dim); line-height: 1.6; }
+        .pop-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 20px rgba(0, 255, 136, 0.1); }
+        
+        /* Certificate Image Styling */
+        .cert-img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: 12px;
+        }
+
+        .pop-card h3 { color: var(--primary); margin-bottom: 5px; font-size: 1.2rem; }
+        .pop-card p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 15px; }
 
         #detail-content { text-align: left; }
         #detail-content ul { margin-top: 15px; padding-left: 20px; color: var(--text-dim); }
         #detail-content li { margin-bottom: 10px; line-height: 1.6; }
-        .btn-view { margin-top: 20px; display: inline-block; cursor: pointer; color: var(--accent); border: 1px solid var(--accent); padding: 8px 15px; border-radius: 5px; text-decoration: none; transition: 0.3s; }
+        
+        .btn-view { display: inline-block; cursor: pointer; color: var(--accent); border: 1px solid var(--accent); padding: 8px 15px; border-radius: 5px; text-decoration: none; transition: 0.3s; font-size: 0.8rem; }
         .btn-view:hover { background: var(--accent); color: var(--bg); }
 
-        .resume-container {
-            display: flex; flex-direction: column; gap: 30px; align-items: center; margin-top: 30px; padding-bottom: 50px;
-        }
-        .resume-page {
-            width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1);
-        }
+        .resume-container { display: flex; flex-direction: column; gap: 30px; align-items: center; margin-top: 30px; padding-bottom: 50px; }
+        .resume-page { width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); }
 
         h2 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary); border-bottom: 2px solid rgba(0, 210, 255, 0.1); display: inline-block; padding-bottom: 5px; }
         .tag { background: #0f172a; color: var(--accent); padding: 4px 10px; border-radius: 6px; margin: 4px; font-size: 0.8rem; border: 1px solid var(--accent); display: inline-block; }
@@ -191,10 +198,10 @@
     <section id="hire" class="content-section">
         <h2>Why Hire Me?</h2>
         <div class="grid-layout">
-            <div class="pop-card"><i class="fas fa-brain"></i><h3>Versatility</h3><p>Bridging raw data and actionable software solutions.</p></div>
-            <div class="pop-card"><i class="fas fa-lightbulb"></i><h3>Innovation</h3><p>Creative solutions proven in the Smart India Hackathon.</p></div>
-            <div class="pop-card"><i class="fas fa-users"></i><h3>Teamwork</h3><p>Strong interpersonal skills and networking ability.</p></div>
-            <div class="pop-card"><i class="fas fa-search"></i><h3>Precision</h3><p>Keen eye for detail applied to debugging and UI/UX.</p></div>
+            <div class="pop-card"><i class="fas fa-brain" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Versatility</h3><p>Bridging raw data and actionable software solutions.</p></div>
+            <div class="pop-card"><i class="fas fa-lightbulb" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Innovation</h3><p>Creative solutions proven in the Smart India Hackathon.</p></div>
+            <div class="pop-card"><i class="fas fa-users" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Teamwork</h3><p>Strong interpersonal skills and networking ability.</p></div>
+            <div class="pop-card"><i class="fas fa-search" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Precision</h3><p>Keen eye for detail applied to debugging and UI/UX.</p></div>
         </div>
     </section>
 
@@ -202,12 +209,12 @@
         <h2>Education</h2>
         <div class="grid-layout">
             <div class="pop-card">
-                <i class="fas fa-university"></i>
+                <i class="fas fa-university" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Graphic Era University</h3>
                 <p>Bachelor of Computer Applications (BCA)<br>2022 - 2025<br><strong>GPA: 7.7</strong></p>
             </div>
             <div class="pop-card">
-                <i class="fas fa-school"></i>
+                <i class="fas fa-school" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>ST. Francis School</h3>
                 <p>XII (Intermediate): 76%<br>X (Matriculation): 67%</p>
             </div>
@@ -248,17 +255,17 @@
         <h2>Expertise</h2>
         <div class="grid-layout">
             <div class="pop-card">
-                <i class="fas fa-laptop-code"></i>
+                <i class="fas fa-laptop-code" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Languages</h3>
                 <p>Java, Python, C, SQL, JavaScript, HTML/CSS</p>
             </div>
             <div class="pop-card">
-                <i class="fas fa-layer-group"></i>
+                <i class="fas fa-layer-group" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Frameworks & Tools</h3>
                 <p>React.js, Node.js, Power BI, TensorFlow, Scikit-learn, Git</p>
             </div>
             <div class="pop-card">
-                <i class="fas fa-comments"></i>
+                <i class="fas fa-comments" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Soft Skills</h3>
                 <p>Critical Thinking, Interpersonal Skills, Adaptability, Networking</p>
             </div>
@@ -268,31 +275,62 @@
     <section id="certs" class="content-section">
         <h2>Certifications</h2>
         <div class="grid-layout">
-            <div class="pop-card"><i class="fas fa-award"></i><h3>React (Basic)</h3><p>HackerRank Certified</p></div>
-            <div class="pop-card"><i class="fab fa-microsoft"></i><h3>Azure AI</h3><p>Microsoft/LinkedIn Learning</p></div>
-            <div class="pop-card"><i class="fas fa-code"></i><h3>Node.js</h3><p>Simplilearn Certified</p></div>
+            <div class="pop-card" style="cursor: pointer;" onclick="openCert('azure')">
+                <img src="https://img.icons8.com/color/480/azure-1.png" class="cert-img" alt="Azure AI">
+                <h3>Azure AI Fundamentals</h3>
+                <p>Microsoft / LinkedIn</p>
+                <span class="btn-view">Verify License</span>
+            </div>
+            
+            <div class="pop-card" style="cursor: pointer;" onclick="openCert('react')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" class="cert-img" alt="React">
+                <h3>React (Basic)</h3>
+                <p>HackerRank Certified</p>
+                <span class="btn-view">Verify License</span>
+            </div>
+
+            <div class="pop-card" style="cursor: pointer;" onclick="openCert('sql')">
+                <img src="https://img.icons8.com/color/480/sql.png" class="cert-img" alt="SQL">
+                <h3>SQL (Intermediate)</h3>
+                <p>HackerRank Certified</p>
+                <span class="btn-view">Verify License</span>
+            </div>
+
+            <div class="pop-card" style="cursor: pointer;" onclick="openCert('node')">
+                <img src="https://img.icons8.com/color/480/nodejs.png" class="cert-img" alt="Node JS">
+                <h3>Node.js</h3>
+                <p>Simplilearn Certified</p>
+                <span class="btn-view">Verify License</span>
+            </div>
         </div>
     </section>
 
     <section id="hobbies" class="content-section">
         <h2>Hobbies</h2>
         <div class="grid-layout">
-            <div class="pop-card"><i class="fas fa-book-open"></i><h3>Reading</h3><p>Staying updated with tech literature.</p></div>
-            <div class="pop-card"><i class="fas fa-camera"></i><h3>Photography</h3><p>Focusing on visual detail.</p></div>
-            <div class="pop-card"><i class="fas fa-plane"></i><h3>Traveling</h3><p>Exploring new perspectives.</p></div>
+            <div class="pop-card"><i class="fas fa-book-open" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Reading</h3><p>Staying updated with tech literature.</p></div>
+            <div class="pop-card"><i class="fas fa-camera" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Photography</h3><p>Focusing on visual detail.</p></div>
+            <div class="pop-card"><i class="fas fa-plane" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Traveling</h3><p>Exploring new perspectives.</p></div>
         </div>
     </section>
 
     <section id="contact" class="content-section">
         <h2>Contact</h2>
         <div class="grid-layout">
-            <div class="pop-card"><i class="fas fa-envelope"></i><h3>Email</h3><p>agarwalchakshu000123@gmail.com</p></div>
-            <div class="pop-card"><i class="fab fa-linkedin"></i><h3>LinkedIn</h3><p>linkedin.com/in/chakshu-agarwal</p></div>
-            <div class="pop-card"><i class="fas fa-phone"></i><h3>Phone</h3><p>+91 7417355448</p></div>
+            <div class="pop-card"><i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Email</h3><p>agarwalchakshu000123@gmail.com</p></div>
+            <div class="pop-card"><i class="fab fa-linkedin" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>LinkedIn</h3><p>linkedin.com/in/chakshu-agarwal</p></div>
+            <div class="pop-card"><i class="fas fa-phone" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i><h3>Phone</h3><p>+91 7417355448</p></div>
         </div>
     </section>
 
     <script>
+        const certLinks = {
+            'azure': 'https://www.linkedin.com/learning/certificates/07095f403a64996d3b059daf60defcb2dd39b92abd074c504f40a25e2368dd5f?trk=share_certificate',
+            'react': 'https://www.hackerrank.com/certificates/79e6e3a6a077',
+            'sql': 'https://www.hackerrank.com/certificates/c63fbf65da87',
+            'node': 'https://simpli-web.app.link/e/azTlTJ6y9Zb'
+        };
+
         const projectData = {
             'sales': {
                 title: "Sales Dashboard Analysis",
@@ -323,6 +361,10 @@
             }, 500);
         }
 
+        function openCert(key) {
+            window.open(certLinks[key], '_blank');
+        }
+
         function openProject(key) {
             const project = projectData[key];
             document.getElementById('detail-title').innerText = project.title;
@@ -339,7 +381,7 @@
             setTimeout(() => { if(activeSection) activeSection.style.display = 'none'; home.classList.remove('hidden'); setTimeout(() => { home.classList.remove('fade-out'); }, 50); }, 500);
         }
 
-        // --- BACKGROUND: 200 PARTICLES, NO LINES ---
+        // --- BACKGROUND ---
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
